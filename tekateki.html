@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Teka-Teki Level Ekstrem</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 80px;
+            background: linear-gradient(to right, #000428, #004e92);
+            color: white;
+        }
+        .box {
+            background: rgba(255,255,255,0.1);
+            padding: 25px;
+            margin: auto;
+            width: 420px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.6);
+        }
+        input {
+            padding: 10px;
+            width: 80%;
+            margin-top: 10px;
+            font-size: 18px;
+        }
+        button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+            border: none;
+            background: #00e676;
+            color: black;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        #hasil {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <h3>🧠 Level Ekstrem </h3>
+        <p>
+            jawab dengan benar untuk membuka portal rahasia
+        </p>
+        <p>
+            Berapa hasil dari:
+        </p>
+
+        <h2>
+            (5! × 11) + (4³ × √100) − (3! × 10)
+        </h2>
+
+        <p style="font-size:14px;">
+            Petunjuk: ! = faktorial, √ = akar
+        </p>
+
+        <input type="number" id="jawaban" placeholder="Masukkan jawaban">
+        <br>
+        <button onclick="cek()">Jawab</button>
+
+        <p id="hasil"></p>
+    </div>
+
+    <script>
+        function cek() {
+            var j = document.getElementById("jawaban").value;
+
+            if (j == "1320") {
+                document.getElementById("hasil").innerHTML = "🔥 Benar! Kamu berhasil mengakses web misi rahasia";
+                setTimeout(function() {
+                    window.location.href = "https://rsk956.github.io/hbd-smr/";
+                }, 1500);
+            } else {
+                document.getElementById("hasil").innerHTML = "❌ Salah! Fokus dan hitung perlahan.";
+            }
+        }
+    </script>
+
+</body>
+</html>
